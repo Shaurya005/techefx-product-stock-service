@@ -1,26 +1,27 @@
 spring:
   application:
     name: techefx-product-stock-service
-  sleuth:
-    enabled: true
-  zipkin:
-    enabled: true
-    base-url: ${ZIPKIN_SERVER:http://localhost:9411/}
+#  sleuth:
+#    enabled: true
+#  zipkin:
+#    enabled: true
+#    base-url: ${ZIPKIN_SERVER:http://localhost:9411/}
 
 server:
   port: ${port:8800}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
+#In earlier versions of Eureka, we had to specify the default Eureka URL but in new versions we don't need to specify while using default Port 8761.
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
 
